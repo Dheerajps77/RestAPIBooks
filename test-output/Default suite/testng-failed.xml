@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ToolsQA.RestApi.tests.RestAPITesting">
+      <class name="ToolsQA.RestApi.tests.EndToEndTest">
         <methods>
           <include name="addBooks"/>
         </methods>
-      </class> <!-- ToolsQA.RestApi.tests.RestAPITesting -->
+      </class> <!-- ToolsQA.RestApi.tests.EndToEndTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,6 +7,10 @@ import test1.Utils;
 import static io.restassured.RestAssured.*;
 
 import org.json.JSONObject;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import api.pojo.requests.AuthorizationusersRequest;
 
 public class CreateUser {
 
@@ -16,40 +20,39 @@ public class CreateUser {
 	public static String baseUrl = "https://bookstore.toolsqa.com";
 	public static String baseEndpoint = "/Account/v1/GenerateToken";
 	public static String baseEndPointofUser = "/Account/v1/User";
+	static AuthorizationusersRequest authorizationusers;
+	JSONObject jsonObject=new JSONObject();
 	
-
-	public static Response createUserToAccess() {
-		Response responseBody;
+	public static String getUserNameAndPassword() {
+		JSONObject jsonObject = new JSONObject();
+		String userIdAndPassowrd="";
+		authorizationusers=new AuthorizationusersRequest(userName, userPassword);
 		try {
-			RestAssured.baseURI=baseUrl;
-			responseBody=given().
-			header("Content-Type", "application/json").
-			header("accept", "application/json").
-			body("{\r\n"
-          		+ "  \"userName\": \""+userName+"\",\r\n"
-          		+ "  \"password\": \""+userPassword+"\"\r\n"
-          		+ "}").
-			post(baseEndPointofUser);
-			
-			responseBody.then().log().all().
-			assertThat().statusCode(201).
-			extract().asString();			
+			jsonObject.put("userName", authorizationusers.getUserName());
+			jsonObject.put("password", authorizationusers.getPassword());
 		} catch (Exception e) {
 			throw e;
 		}
-		return responseBody;
+		userIdAndPassowrd=jsonObject.toString();
+		return userIdAndPassowrd;
 	}
 	
-	public static JSONObject getUserNameAndPassword() {
-		JSONObject jsonObject = new JSONObject();
+	@Test(priority=1)
+	public static void createUserToAccess() {
+		String userIdAndPassword="";
 		try {
-			jsonObject.put("userName", userName);
-			jsonObject.put("password", userPassword);
-			response = createUserToAccess();
+			RestAssured.baseURI=baseUrl;
+			userIdAndPassword=given().
+			header("Content-Type", "application/json").
+			header("accept", "application/json").
+			body(getUserNameAndPassword()).
+			post(baseEndPointofUser).
+			then().log().all().
+			assertThat().statusCode(201).
+			extract().asString();
 		} catch (Exception e) {
 			throw e;
 		}
-		return jsonObject;
 	}
 	
 	public static String getUserID() {
@@ -64,9 +67,8 @@ public class CreateUser {
 	}
 	
 	public static void main(String[] args) {
-		JSONObject getUserNameAndPassInJSOnFormat=new JSONObject();
-		getUserNameAndPassInJSOnFormat=getUserNameAndPassword();
-		System.out.println(getUserNameAndPassInJSOnFormat);
+		System.out.println("userId and password : " + getUserNameAndPassword());
 	}
+	 
 
 }
