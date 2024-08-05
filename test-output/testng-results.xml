@@ -1,29 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-25T12:39:05Z" name="Default suite" finished-at="2023-09-25T12:39:10Z" duration-ms="4459">
+  <suite started-at="2023-10-11T15:44:59Z" name="Suite" finished-at="2023-10-11T15:44:59Z" duration-ms="49">
     <groups>
     </groups>
-    <test started-at="2023-09-25T12:39:05Z" name="Default test" finished-at="2023-09-25T12:39:10Z" duration-ms="4459">
-      <class name="ToolsQA.RestApi.tests.EndToEndTest">
-        <test-method signature="createUserToAccess()[pri:1, instance:ToolsQA.RestApi.tests.EndToEndTest@f107c50]" started-at="2023-09-25T12:39:05Z" name="createUserToAccess" finished-at="2023-09-25T12:39:08Z" duration-ms="2407" status="PASS">
+    <test started-at="2023-10-11T15:44:59Z" name="Test" finished-at="2023-10-11T15:44:59Z" duration-ms="49">
+      <class name="TestNG.tests.AnnotationClasses">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="beforeSuite" finished-at="2023-10-11T15:44:59Z" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createUserToAccess -->
-        <test-method signature="generateToken()[pri:2, instance:ToolsQA.RestApi.tests.EndToEndTest@f107c50]" started-at="2023-09-25T12:39:08Z" name="generateToken" finished-at="2023-09-25T12:39:09Z" duration-ms="826" status="PASS">
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="beforeTest" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- generateToken -->
-        <test-method signature="getBooks()[pri:3, instance:ToolsQA.RestApi.tests.EndToEndTest@f107c50]" started-at="2023-09-25T12:39:09Z" name="getBooks" finished-at="2023-09-25T12:39:09Z" duration-ms="564" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="beforeClass" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBooks -->
-        <test-method signature="addBooks()[pri:4, instance:ToolsQA.RestApi.tests.EndToEndTest@f107c50]" started-at="2023-09-25T12:39:09Z" name="addBooks" finished-at="2023-09-25T12:39:10Z" duration-ms="634" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="beforeMethod" finished-at="2023-10-11T15:44:59Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBooks -->
-      </class> <!-- ToolsQA.RestApi.tests.EndToEndTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="SendOTPTestclassAMethod3()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="SendOTPTestclassAMethod3" finished-at="2023-10-11T15:44:59Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendOTPTestclassAMethod3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="afterMethod" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="beforeMethod" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="resetPasswordTestClassAMethod2()[pri:1, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="resetPasswordTestClassAMethod2" finished-at="2023-10-11T15:44:59Z" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPasswordTestClassAMethod2 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="afterClass" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="afterTest" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="afterMethod" finished-at="2023-10-11T15:44:59Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestNG.tests.AnnotationClasses@1efe439d]" started-at="2023-10-11T15:44:59Z" name="afterSuite" finished-at="2023-10-11T15:44:59Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestNG.tests.AnnotationClasses -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
